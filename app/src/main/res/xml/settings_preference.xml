@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="General Settings">
 
+        <CheckBoxPreference
+            android:key="enable_feature"
+            android:title="Enable Feature"
+            android:summary="Enable or disable a feature"
+            android:defaultValue="true"
+            />
+
+        <EditTextPreference
+            android:key="username"
+            android:title="Username"
+            android:summary="Enter your username"
+            android:defaultValue=""
+            />
+
+    </PreferenceCategory>
+
+    <!-- Add more preferences here -->
 </PreferenceScreen>
