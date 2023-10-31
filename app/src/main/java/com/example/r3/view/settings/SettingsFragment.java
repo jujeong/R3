@@ -2,11 +2,6 @@ package com.example.r3.view.settings;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.EditTextPreference;
 import androidx.preference.Preference;
@@ -18,28 +13,6 @@ import com.example.r3.R;
 
 public class SettingsFragment extends PreferenceFragmentCompat
         implements SharedPreferences.OnSharedPreferenceChangeListener {
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = super.onCreateView(inflater, container, savedInstanceState);
-
-        // Hide the title bar
-        if (getActivity() != null) {
-            ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-        }
-
-        return view;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-
-        // Show the title bar when leaving the fragment
-        if (getActivity() != null) {
-            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
-        }
-    }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
